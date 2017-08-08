@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>   
+            Blog
+        </title>
+        <link rel="icon" href="image/favicon.png" type="image/x-icon"/>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <!--导航条-->
+        <div class="Header clearfix">
+            <a href="https://l511407563.github.io/lyindex.github.io/" target="_blank"><div class="Headerlogo"></div></a>
+            <div class="Headermain clearfix">
+					<ul id="HeaderLeft">
+						<li>
+							<a href="#">我的博客</a>
+							<ul class="Headerlink">
+								<li><a href="http://3ms.huawei.com/hi/home/1140109" target="_blank">HI博客</a></li>
+								<li><a href="http://support.huawei.com/huaweiconnect/jdc/forum.php?mod=forumdisplay&action=list&fid=1175&filter=typeid&typeid=3775" target="_blank">BES论坛</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Github</a>
+							<ul class="Headerlink">
+								<li><a href="https://github.com/" target="_blank">Github官网</a></li>
+								<li><a href="http://rnd-github.huawei.com/" target="_blank">Github华为</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">往期文章</a>
+							<ul class="Headerlink">
+								<li><a href="#" target="_blank">CIE文档</a></li>
+								<li><a href="#" target="_blank">Linux文档</a></li>
+								<li><a href="#" target="_blank">前端文档</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" target="_blank">联系方式</a>
+							<ul class="Headerlink nav-tel">
+								<li><a href="#">电话号码</a>
+                                    <span>15799057509</span>
+                                </li>
+								<li><a href="#">espace</a>
+                                    <span>lwx469789</span>
+                                </li>
+								<li><a href="#">QQ</a>
+                                    <span>511407563</span>
+                                </li>
+								<li><a>微信公众号</a>
+									<img src="image/callme.png" alt="IT肌肉男">
+                                </li>
+							</ul>
+						</li>
+					</ul>
+				
+				<div class="HeaderMiddle">
+					<span><input type="text" class="search" placeholder="输入查找......"></span>
+					<span>宇哥的照片</span>
+					<span>宇哥的文章</span>
+				</div>
+				<div class="HeaderRight">
+					<!--javascript:是伪协议，表示url的内容通过javascript执行。void(0)表示不作任何操作，这样会防止链接跳转到其他页面。这么做往往是为了保留链接的样式，但不让链接执行实际操作，具体的操作交给链接的onclick事件处理-->
+					<div><a href="javascript:void(0);" onclick="SetHome(this,document.domain);"><span>设为首页</span></a></div>
+					<div><a href="javascript:void(0);" onclick="AddFavorite('我的网站',location.href);"><span>收藏本站</span></a></div>
+				</div>
+			</div>
+        </div>
+
+        <!--欢迎语-->
+        <p class="welcome"></p>
+
+		<!--遮罩-->
+		<div class="cover">
+			<button><a href="#">Blog</a></button>
+			<button><a href="#">Log</a></button>
+			<button><a href="#">二维码</a></button>
+		</div>
+		
+
+        <script src="vendor/jquery-1.11.1.js"></script>
+        <script src="vendor/returnTop.js"></script>
+        <!--<script src="vendor/vue.js"></script>-->
+        <script src="js/index.js"></script>
+    </body>
+</html>
