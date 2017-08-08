@@ -7,7 +7,10 @@ img { border:none; vertical-align:top; }
 table { border-collapse:collapse; }
 input,textarea { outline:none; }
 textarea { resize:none; overflow:auto; }
-body { font-size:12px; font-family:"微软雅黑";background-color: lavender;height: 3500px;}
+body { font-size:12px; font-family:"微软雅黑";background-color: lavender;height: 2500px;}
+.body-bg{
+	background-image: url(../image/body.jpg);
+}
 /* end reset */
 
 /* public */
@@ -54,6 +57,7 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
 
 /*导航条*/
 .Header {
+	position: fixed;
     font-weight: bold;
     width: 100%;
     min-width: 990px;
@@ -234,4 +238,28 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
 	font-weight: bold;
 	font-size: 18px;
 	border: none;
+}
+/*
+*底部
+*/
+.cover-footer{
+	position:fixed;
+	top: 90%;
+	left: 43%;
+	color: gray;
+	letter-spacing: 20px;
+}
+.cover-footer>hr{
+	border: 2px solid gray;
+}
+.footer{
+	display: none;
+	position:fixed;
+	top: 90%;
+	left: 40%;
+	color: blue;
+	letter-spacing: 20px;
+}
+.footer>hr{
+	border: 2px solid blue;
 }
