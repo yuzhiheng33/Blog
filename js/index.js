@@ -1,20 +1,3 @@
-//设为首页
-function SetHome(obj,url) {
-    try{
-        obj.style.behavior='url(#default#homepage)';
-        obj.setHomePage(url);
-    }catch(e){
-        if(window.netscape){
-            try{
-                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-            }catch(e){
-                alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入“about:config”并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
-            }
-        }else{
-            alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将【"+url+"】设置为首页。");
-        }
-    }
-}
 //收藏本站
 function AddFavorite(title, url) {
     try {
@@ -39,27 +22,31 @@ $(document).ready(function () {
             ly.Snow();
             ly.Welcome('.welcome', 'Welcome to my Blog!', '.cover');
         },
-        Blog : function () {
-            ly.Nav('.Header');
+        goBlog : function () {
+            ly.Nav('.Header', '.footer', '.cover-footer');
             ly.Hover('#HeaderLeft', 'li', 'ul');
             ly.Hover('.nav-tel', 'li', 'span', 'img', 'fixImg');
             ly.Focus('.HeaderMiddle', '.search');
         },
-        //导航条点击显示
-        Nav : function (nav) {
+        //导航条显示
+        Nav : function (nav, foot, cfoot) {
             var $nav = $(nav);
-            $(document).click(function () {
-                $nav.toggle();
-            });
+            var $foot = $(foot);
+            var $cfoot = $(cfoot); 
+            $nav.show();
             var $dh = $(document).height();
             var $wh = $(window).height();
             var $h = $dh - $wh;
             $(window).scroll(function () {
                 var $s = $(window).scrollTop();
-                if ($s > 0 && $s < $h) {
-                    $nav.css({'display': 'block', 'position': 'fixed'})
+                if ($s >= $h) {
+                    $nav.hide();
+                    $cfoot.hide();
+                    $foot.show();
                 } else {
-                    $nav.css('display','none')
+                    $foot.hide();
+                    $cfoot.show();
+                    $nav.show();
                 }
             });
         },
@@ -126,24 +113,25 @@ $(document).ready(function () {
             function wT(){
                 var val = str.substring(0, word++);
                 $welcome.html(val);
-                console.log(1)
                 if (val == str) {
                     $welcome.animate({width: '80%'}, 2000, function() {
-                        ly.Cover(wrap);
+                        ly.Cover(wrap, e);
                     });
                     clearInterval(wordTimer);  
                 };	
             };
         },
         //遮罩
-        Cover : function (wrap) {
+        Cover : function (wrap, e) {
             var $wrap = $(wrap);
             $wrap.height($(window).height()).width($(window).width());
             $wrap.children('button').each(function(i, val) {
                 $(this).show();
                 $(this).click(function() {
                     $(wrap).hide();
-                    ly.Blog();
+                    $(e).hide();
+                    $('body').addClass('body-bg');
+                    ly.goBlog();
                 });
             });
         }
@@ -152,7 +140,6 @@ $(document).ready(function () {
     //实例化我的博客对象
     var ly = new Public();
     ly.init();
-    
     
     
 })
