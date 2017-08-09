@@ -5,7 +5,7 @@
         <title>   
             gulp+vue
         </title>
-        <link rel="icon" href="http://rnd-github.huawei.com/favicon-enterprise.ico" type="image/x-icon"/>
+        <link rel="icon" href="image/favicon.jpg" type="image/x-icon"/>
         <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
@@ -64,12 +64,6 @@
 					<!--javascript:是伪协议，表示url的内容通过javascript执行。void(0)表示不作任何操作，这样会防止链接跳转到其他页面。这么做往往是为了保留链接的样式，但不让链接执行实际操作，具体的操作交给链接的onclick事件处理-->
 					<div><a href="javascript:void(0);" onclick="self.location=document.referrer;"><span>返回首页</span></a></div>
 					<div><a href="javascript:void(0);" onclick="AddFavorite('我的网站',location.href);"><span>收藏本站</span></a></div>
-					<!--js返回上一页并刷新的几种方法:
-					<a href="javascript:history.go(-1)">返回上一页</a> 
-					<a href="javascript:location.reload()">刷新当前页面</a> 
-					<a href="javascript:" onclick="history.go(-2); ">返回前两页</a> 
-					<a href="javascript:" onclick="self.location=document.referrer;">返回上一页并刷新</a> 
-					<a href="javascript:" onclick="history.back();">返回上一页</a>-->
 				</div>
 			</div>
         </div>
