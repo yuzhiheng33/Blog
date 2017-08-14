@@ -16,6 +16,7 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
 /* public */
 .clearfix:after{content:'';display: table;clear: both;} /*清IE8+浮动*/
 /* end public */
+
 /*
  * 雪花特效
 */
@@ -29,6 +30,7 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
 	/*解决设置了固定宽高后背景图片只显示一部分的问题*/
 	background-size: cover;
 }
+
 /*
  * 火箭特效
 */
@@ -43,6 +45,7 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
 	z-index: 9999;
 	text-indent: -9999px;
 }
+
 /*
 * 固定图片
 */
@@ -74,6 +77,7 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
 	background-image: url(../image/github.png);
 	background-size: cover;
 }
+
 /*导航条主*/
 .Headermain{
 	width: 80%;
@@ -81,6 +85,7 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
 	height: 75px;
 	margin: 0 auto;
 }
+
 /*
  * 导航条左
 */
@@ -126,6 +131,7 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
     font-weight: bold;
     display: none;
 }
+
 /*
  *导航条中
 */
@@ -160,6 +166,7 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
 	padding-left: 5px;
 	font-size: 14px;
 }
+
 /*
  * 导航条右
 */
@@ -184,6 +191,7 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
 	color: white;
 	font-size: 16px;
 }
+
 /*
  * welcome
 */
@@ -205,6 +213,7 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
     /*滤镜,IE678,GradientType=0表示从上到下渐变     1表示从左到右渐变*/
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#008000',GradientType=1 ); 	
 }
+
 /*
 *遮罩
 */
@@ -221,7 +230,7 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
 .cover>button{
 	display: none;
 	position: relative;
-	top: 30%;
+	top: 10%;
 	left: 36.5%;
 	width: 120px;
 	height: 60px;
@@ -239,6 +248,7 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
 	font-size: 18px;
 	border: none;
 }
+
 /*
 *底部
 */
@@ -263,3 +273,29 @@ body { font-size:12px; font-family:"微软雅黑";background-color: lavender;hei
 .footer>hr{
 	border: 2px solid blue;
 }
+
+/*
+*内容
+*/
+#container {
+	width: 990px;
+	margin: 0 auto;
+}
+
+/*
+*echarts
+*/
+#container > select {
+	display: inline-block;
+	margin: 150px 0 0 300px;
+	border: 5px solid red;
+}
+
+#container > #main {
+	margin: 20px auto;
+	padding: 20px;
+	width: 600px;
+	height: 400px;
+	border: 5px solid greenyellow;
+}
+
