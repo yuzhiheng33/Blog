@@ -156,7 +156,7 @@ function AddFavorite(title, url) {
 //echarts图表
 $.ajax({
     type: 'get',
-    url: 'data/echarts.json',
+    url: 'echarts.json',
     success: function (result, statusText, xhr) {
         debugger
         var arr = result;
